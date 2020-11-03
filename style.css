@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after{
+    padding: 0;
+    margin: 0;
+    outline: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+:root{
+    --primary-color: #726a95;
+    --yellow: #f6d186;
+    --green: #445c3c;
+    --green-light:#a7e9af;
+}
+
+body{
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: var(--primary-color);
+}
+h1{
+    font-size: 58px;
+    color: white;
+    padding-bottom: 50px;
+}
+p{
+    padding-bottom: 20px;
+    color: white;
+}
+p:nth-of-type(1){
+    color: var(--yellow);
+}
+p:nth-of-type(2){
+    color: var(--green-light);
+}
+p:nth-of-type(3){
+    color: var(--green);
+}
+
+input{
+    border-radius: 5px;
+	min-width: 65%;
+	padding: 5px;
+    border: none;
+    height: 30px;
+}
+.enter{
+    height: 30px;
+    border: none;
+	padding: 5px 15px;
+	border-radius: 5px;
+	color: #ada9bd;
+	background-color: #443c65;
+	transition: all 200ms ease;
+    font-weight: normal;
+    cursor: pointer;
+}
+.enter:hover{
+    background-color: #302b44;
+    color: #ffffff;
+}
+
+ul li {
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background:#9a90c7;
+    border:1px solid #443c65;
+    font-size: 18px;
+    transition: 0.2s;
+    user-select: none;
+  }
+  ul li:hover{
+      background:#d2cce8;;
+  }
+
+  ul li.checked {
+    background: #2a2446;
+    color: #fff;
+    text-decoration: line-through;
+    transition: all 200ms ease;
+  }
+
+  ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+    transition: all 500ms ease-in-out;
+  }
+
+  .close:hover {
+    transform: rotate(360deg);
+  }
