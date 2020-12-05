@@ -48,3 +48,42 @@ function newElement() {
       }
     }
   }
+
+In jQuery, the following would work:
+
+$("#id_of_textbox").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#id_of_button").click();
+    }
+});
+$("#pw").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#myButton").click();
+    }
+});
+
+$("#myButton").click(function() {
+  alert("Button code executed.");
+});
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+Username:<input id="username" type="text"><br>
+Password:&nbsp;<input id="pw" type="password"><br>
+<button id="myButton">Submit</button>
+Expand snippet
+Or in plain JavaScript, the following would work:
+
+document.getElementById("id_of_textbox")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("id_of_button").click();
+    }
+});
+document.getElementById("new-item-enter")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementByClass("enter").click();
+    }
+});
